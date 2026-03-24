@@ -1,6 +1,10 @@
 /** -------------------------MODULES------------------------- **/
 import companyLogo from "../../public/sesame-logo.png";
 import { useState, useRef } from "react";
+import { ClerkProvider } from "@clerk/react";
+import { Show, SignUpButton, SignInButton } from "@clerk/react";
+
+const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 /** -------------------------COMPONENTS------------------------- **/
 import { Link } from "react-router-dom";
@@ -37,8 +41,12 @@ const Navbar = (): React.JSX.Element => {
 				<Link to={"/contact"}>Contact</Link>
 			</div>
 			<div className='flex gap-x-4 col-start-12'>
-				<Link to={"/signup"}>Sign Up</Link>
-				<Link to={"/register"}>Login </Link>
+				<ClerkProvider publishableKey={publishableKey}>
+					<Show when={"signed-out"}>
+						<SignInButton></SignInButton>
+						<SignUpButton></SignUpButton>
+					</Show>
+				</ClerkProvider>
 			</div>
 			{showNavMenu && (
 				<div className='absolute translate-y-40 border-dark-200 border rounded-md w-7/8 flex flex-col items-center [&_a]:text-sm'>

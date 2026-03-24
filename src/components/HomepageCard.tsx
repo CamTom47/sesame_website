@@ -10,10 +10,10 @@ import React from "react";
 interface HomepageCardProps {
 	header: string;
 	text: string;
-	icon: SVGAElement | null;
+	icon?: SVGAElement;
 }
 
-const HomepageCard = ({ header, text, icon = null }: HomepageCardProps): React.JSX.Element => {
+const HomepageCard = ({ header, text, icon }: HomepageCardProps): React.JSX.Element => {
 	/** -------------------------STATE------------------------- **/
 
 	/** -------------------------FUNCTIONS------------------------- **/

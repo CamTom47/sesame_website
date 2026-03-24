@@ -50,12 +50,12 @@ const Homepage = (): React.JSX.Element => {
 					<h1 className='text-6xl font-bold'>Flexible, Automated Bookings </h1>
 					<p className='text-3xl font-light'>Managing your bookings has never been easier</p>
 				</div>
-				<img src={preview1} alt='' className='border rounded-md border-gray-400 shadow-xl' />
+				<img src={'/preview1.png'} alt='' className='border rounded-md border-gray-400 shadow-xl' />
 			</div>
 			<div className='flex flex-col gap-y-8 mx-4'>
 				<h1 className='text-3xl'>What We Do</h1>
-				{cards.map((card) => (
-					<HomepageCard header={card.header} text={card.text} />
+				{cards.map((card, idx) => (
+					<HomepageCard key={idx} header={card.header} text={card.text} />
 				))}
 			</div>
 		</div>
