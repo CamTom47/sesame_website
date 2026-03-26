@@ -1,9 +1,12 @@
 /** -------------------------MODULES------------------------- **/
 import React from "react";
 import preview1 from "../../public/preview1.png";
+import homepageDesktop from "../../public/homepage-desktop.jpg";
+import { Link } from "react-router-dom";
 
 /** -------------------------COMPONENTS------------------------- **/
 import HomepageCard from "../components/HomepageCard";
+import ButtonPrimary from "../components/ButtonPrimary";
 
 /** -------------------------STYLES------------------------- **/
 
@@ -44,13 +47,14 @@ const Homepage = (): React.JSX.Element => {
 	/** -------------------------EFFECTS------------------------- **/
 
 	return (
-		<div className='w-full h-svh flex flex-col'>
-			<div className='flex flex-col gap-y-12 h-full px-4 xl:grid grid-cols-2 xl:mx-36 xl:gap-x-48'>
-				<div className='flex flex-col'>
-					<h1 className='text-6xl font-bold'>Flexible, Automated Bookings </h1>
-					<p className='text-3xl font-light'>Managing your bookings has never been easier</p>
+		<div className='w-full h-vh flex flex-col  bg-[url(../../public/homepage-desktop.jpg)]'>
+			<div className='flex justify-center text-center py-48'>
+				<div className='flex flex-col gap-y-3 items-center'>
+					<h1 className='text-5xl font-medium w-3/4'>Flexible and automated booking to fit your needs</h1>
+					<p className='text-lg font-light'>Managing your bookings has neever been easier</p>
+					<Link to={"/signup"}><ButtonPrimary text='Get Started'/></Link>
 				</div>
-				<img src={'/preview1.png'} alt='' className='border rounded-md border-gray-400 shadow-xl' />
+				{/* <img src={"/preview1.png"} alt='' className='border rounded-md border-gray-400 shadow-xl' /> */}
 			</div>
 			<div className='flex flex-col gap-y-8 mx-4'>
 				<h1 className='text-3xl'>What We Do</h1>

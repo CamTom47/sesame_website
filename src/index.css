@@ -1,4 +1,18 @@
 @import "tailwindcss";
 
 :root {
+	font-family: menco, sans-serif;
+	font-style: normal;
+	font-weight: 100;
+}
+
+@theme {
+	--color-primary-light: #a8ae81;
+	--color-primary: #767b47;
+	--color-primary-dark: #4b4d27;
+	--color-background: #f9f9f9;
+	--color-dark-gray: #a7a7a7;
+	--color-light-gray: #f3f3f3;
+	--color-shadow: #d8d8d8;
+	--navbar-max: 56px;
 }

@@ -7,17 +7,17 @@ import React from "react";
 
 /** -------------------------INTERFACES------------------------- **/
 
-const SignUp = (): React.JSX.Element => {
+const ButtonPrimary = ({ text }: { text: string }): React.JSX.Element => {
 	/** -------------------------STATE------------------------- **/
 
 	/** -------------------------FUNCTIONS------------------------- **/
 
 	/** -------------------------EFFECTS------------------------- **/
 
-	return <div>
-        <form action="">
-            
-        </form>
-    </div>;
+	return (
+		<button type="button" className='px-6 py-2 bg-primary-light text-primary-dark w-fit rounded-lg hover:bg-primary-dark hover:text-white hover:outline hover:outline-primary-light duration-150'>
+			<p>{text}</p>
+		</button>
+	);
 };
-export default SignUp;
+export default ButtonPrimary;
